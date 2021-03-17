@@ -6,5 +6,7 @@
         document.getElementById(viewId).classList.add('active');
     };
     scheduler._appointments = [];
-
+    // scheduler._updateAppointments = () => {
+    //     document.getElementById('')
+    // }
 })
