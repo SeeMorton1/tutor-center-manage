@@ -1,10 +1,10 @@
 (scheduler => {
     let tutorsLoaded = false;
 
-    scheduler.availableTutors = {
+    scheduler.tutorList = {
         load() {
             if(!tutorsLoaded){
-                let tutors = scheduler.availableTutors.getTutors();
+                let tutors = scheduler.inventory.getTutors();
 
                 let fragment = document.createDocumentFragment();
 
@@ -13,14 +13,14 @@
                     li.innerText = tutor.name;
                     li.classList.add('list-group-item');
                     li.onclick = () => {
-                        //scheduler.tutorDetails.load(tutor.tutorId);
+                        scheduler.calendar.load(tutor.tutorId);
                     };
                     fragment.appendChild(li);
                 });
-                document.querySelector('#availableTutors_tutors').appendChild(fragment);
+                document.querySelector('#tutorList_tutors').appendChild(fragment);
                 tutorsLoaded = true;
             }
-            scheduler._changeView('availableTutors');
+            scheduler._changeView('tutorList');
         }
     };
 

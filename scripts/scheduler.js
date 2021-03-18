@@ -1,10 +1,10 @@
 (scheduler =>{
 
     class Appointment{
-        constructor(tutorId, tutorName, studentName, date) {
-            this.tutorId = tutorId;
-            this.tutorName = tutorName;
+        constructor(tutor, studentName, note, date) {
+            this.tutor= tutor;
             this.studentName = studentName;
+            this.note = note;
             this.date = date;
         }
     }
@@ -14,8 +14,15 @@
             this.tutorId = tutorId;
             this.name = name;
             this.skills = skills;
-            this.appointments = appointments;
+            this.appointments = [];
+
+
         }
+        addAppointment(newAppointment){
+            this.appointments.push(newAppointment);
+        }
+
+
     }
     let tutors  = [
         new Tutor(
@@ -44,7 +51,7 @@
             [".NET"]
         )
     ];
-    scheduler.availableTutors = {
+    scheduler.inventory = {
         getTutors: () => tutors,
         getTutor: tutorId => tutors.find(x => x.tutorId === tutorId)
     };

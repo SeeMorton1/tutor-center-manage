@@ -5,3 +5,8 @@ main > * {
 main > .active {
     display: block;
 }
+#calendar {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

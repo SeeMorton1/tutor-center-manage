@@ -9,4 +9,4 @@
     // scheduler._updateAppointments = () => {
     //     document.getElementById('')
     // }
-})
+}) (scheduler || (scheduler = {}));
