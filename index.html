@@ -35,6 +35,23 @@
             <div class = "clearfix"></div>
             <p> table for calendar</p>
 
+            <table id = "calendar_availableTimes" class = "table table-condensed table-striped">
+                <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Availability</th>
+                </tr>
+                </thead>
+                <template>
+                    <tr>
+                        <td><a href = '#'></a></td>
+                        <td><span></span></td>
+                    </tr>
+                </template>
+                <tbody></tbody>
+            </table>
+            <button onclick = "scheduler.tutorList.load()" type = "button" class = "btn btn-secondary">Return to Tutor List</button>
+
         </div>
         <div id = "appointment">
             <h2> NEW APPOINTMENT</h2>

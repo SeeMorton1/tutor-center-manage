@@ -1,13 +1,13 @@
 (scheduler =>{
 
-    class Appointment{
-        constructor(tutor, studentName, note, date) {
-            this.tutor= tutor;
-            this.studentName = studentName;
-            this.note = note;
-            this.date = date;
-        }
-    }
+    // class Appointment{
+    //     constructor(tutor, studentName, note, date) {
+    //         this.tutor= tutor;
+    //         this.studentName = studentName;
+    //         this.note = note;
+    //         this.date = date;
+    //     }
+    // }
 
     class Tutor{
         constructor(tutorId,name,skills, appointments) {
