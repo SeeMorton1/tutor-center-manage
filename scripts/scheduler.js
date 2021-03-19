@@ -14,16 +14,20 @@
             this.tutorId = tutorId;
             this.name = name;
             this.skills = skills;
-            this.appointments = [];
+            this.appointments = {};
 
 
         }
         addAppointment(newAppointment){
-            this.appointments.push(newAppointment);
+            this.appointments[newAppointment.date] = newAppointment;
         }
+        
+        
 
 
     }
+
+    
     let tutors  = [
         new Tutor(
             1,
@@ -57,3 +61,6 @@
     };
 
 }) (scheduler || (scheduler = {}));
+
+//Just finished the buttons for make appointment, now it is time to add logic to change the view in calendar
+//So that each day in calendar represents being taken up if it is.

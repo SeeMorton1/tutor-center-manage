@@ -9,6 +9,7 @@
             this.note = note;
             this.date = date;
         }
+        
     }
     let newAppointment;
     let selectedTutor;
@@ -21,13 +22,15 @@
             selectedTutor = scheduler.inventory.getTutor(tutorId);
             newAppointment = new Appointment(selectedTutor, userName,userNote,date);
 
+
+            scheduler._changeView('appointment');
         },
         bookAppointment(){
             scheduler._appointments.push(newAppointment);
             selectedTutor.addAppointment(newAppointment);
             scheduler.calendar.load(selectedTutor.tutorId);
         }
-    }
+    };
 
 
 }) (scheduler || (scheduler = {}));

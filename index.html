@@ -44,11 +44,17 @@
                 </thead>
                 <template>
                     <tr>
-                        <td><a href = '#'></a></td>
+                        <td><a></a></td>
                         <td><span></span></td>
                     </tr>
                 </template>
-                <tbody></tbody>
+                
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td><button onclick = "scheduler.appointment.load()" type = "button" class = "btn btn-secondary">Make </button></td>
+                    </tr>
+                </tbody>
             </table>
             <button onclick = "scheduler.tutorList.load()" type = "button" class = "btn btn-secondary">Return to Tutor List</button>
 
